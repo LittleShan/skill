@@ -41,6 +41,46 @@ If-Match 首部字段属附带条件之一，它会告知服务器匹配资源�
  <br />
 例子：If-Match："123456"
 
+#### If-Modified-Since
+If-Modified-Since 首部字段属附带条件之一，它会告知服务器若If-Modified-Since 字段值早于资源更新时间，则希望能处理请求。<br />
+否则，返回状态码304 Not Modified 的响应。<br />
+例子：If-Modified-Since：Thu，15 Apr 2004 00:00:00 GMT
+
+#### If-None-Match
+与 If-Match 作用相反 <br />
+在 GET 和或者 HEAD 方法中使用首部字段 If-None-Match 可获取最新资源
+
+#### If-Range
+If-Range 首部字段属附带条件之一，它会告知服务器若If-Range 字段值和请求资源的 ETag 值或时间相一致时，则作为范围请求处理。反之，返回全体资源<br />
+
+#### If-Unmodified-Since
+与 If-Modified-Since 作用相反 <br />
+如果在指定的日期之后，资源发生了更新则返回 412 
+
+#### Max-Forwards
+可经过的服务器最大树木 <br />
+例子：Max-Forwards：10
+
+#### Proxy-Authorization
+接收到从代理服务器发来的认证质询时，客户端会发送包含首部字段Proxy-Authorization的请求，以告知服务器所需要的认证信息。 <br />
+认证行为发生在客户端与代理服务器之间。客户端与服务器之间的认证使用 Authorization。
+
+#### Range
+获取部分资源的范围请求，接收到Range首部字段请求的服务器，会在处理请求之后返回状态码为 206 Partial Content 的响应。无法处理范围请求时，则会返回200的响应及全部资源。<br />
+例子：Range：bytes=5001-10000
+
+#### Referer
+告知服务器请求的原始资源的URI
+
+#### TE
+首部字段TE会告知服务器客户端能够处理的响应的传输编码方式及相对优先级。<br />
+TE 除了可以指定传输编码之外，还可以指定伴随trailer字段的分块传输编码的方式，应用后者时，只需要把trailer赋值给该字段<br >
+例子：TE：gzip, deflate;q=0.5 <br />
+例子：TE：trailer
+
+#### User-Agent
+User-Agent 会将创建请求的浏览器和用户代理名称传递给服务器
+
 ### 三、响应首部
 
 ### 四、实体首部
