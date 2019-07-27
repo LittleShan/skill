@@ -1,5 +1,3 @@
-# 访问控制
+# 目录
 
-### remote_addr
-
-### http_x_forwarded_for 
+- [Nginx配置](configuration.md)
