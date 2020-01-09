@@ -1,3 +1,13 @@
+## 请求报文
+![request_message](request_message.png)
+
+---
+
+## 响应报文
+![response_message](response_message.png)
+
+---
+
 ### 一、通用首部
 
 ### 二、请求首部
