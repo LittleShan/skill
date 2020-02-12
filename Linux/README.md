@@ -11,3 +11,4 @@
 - [定时任务](crontab.md)
 - [文件系统管理](file-system.md)
 - [环境变量](environment.md)
+- [Linux重定向](redirect.md)
